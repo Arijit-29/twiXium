@@ -1,0 +1,66 @@
+.sidebar{
+    height:100vh;
+    width: 20%;
+    transition: transform 0.3s ease-in-out;
+    background-color: rgb(164, 148, 255) !important;
+}
+.rounded-circle{
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+  display: block;
+}
+.appname{
+    font-weight: 900;
+}
+.line {
+  border: none;
+  height: 1.5px;
+  background-color: #ccc;
+  box-shadow: offset-x offset-y blur-radius spread-radius color;
+  margin: 16px 0;
+}
+.active{
+    color:white !important;
+    background-color: blue !important;
+    
+}
+.nowrap{
+  white-space: nowrap !important;
+}
+.name{
+  margin-left: 10px;
+}
+@media screen and (max-width: 600px){
+.sidebar{
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left:0;
+    height: 92vh;
+    width:230px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .mobile-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1040;
+    display: none;
+  }
+  .mobile-backdrop.show {
+    display: block;
+  }}
+  @media screen and (min-width:500px){
+    .sidebar{
+        height:100vh
+    }
+}

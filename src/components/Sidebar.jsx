@@ -1,13 +1,14 @@
 import { FaEarlybirds } from "react-icons/fa";
+import styles from './Sidebar.module.css'
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <>
       <div
-        className={`mobile-backdrop ${isOpen ? "show" : ""}`}
+        className={`${styles['mobile-backdrop']} ${isOpen ? `${styles.show}` : ""}`}
         onClick={toggleSidebar}
       ></div>
       
-      <div className={`d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar ${isOpen ? "open" : ""}`}>
+      <div className={`d-flex flex-column flex-shrink-0 p-3 ${styles.sidebar} ${isOpen ? `${styles.open}` : ""}`}>
         <a
           href="/"
           className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
@@ -20,13 +21,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           >
             <use xlinkHref="#bootstrap"></use>
           </svg>
-          <span className="fs-4 appname">twiXium <FaEarlybirds/></span>
+          <span className={`fs-4 ${styles.appname}`}>twiXium <FaEarlybirds/></span>
         </a>
         
-        <hr />
+        <hr className={`${styles.line}`}></hr>
         <ul className="nav nav-pills flex-column mb-auto bb">
           <li className="nav-item">
-            <a href="#" className="nav-link active" aria-current="page">
+            <a href="#" className={`nav-link ${styles.active} ${styles.nowrap}`} active aria-current="page">
               <svg
                 className="bi pe-none me-2"
                 width="16"
@@ -40,7 +41,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           </li>
 
           <li>
-            <a href="#" className="nav-link text-white bb">
+            <a href="#" className={`nav-link text-white bb ${styles.nowrap}`}>
               <svg
                 className="bi pe-none me-2"
                 width="16"
@@ -54,7 +55,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           </li>
 
           <li>
-            <a href="#" className="nav-link text-white bb">
+            <a href="#" className={`nav-link text-white bb ${styles.nowrap}`}>
               <svg
                 className="bi pe-none me-2"
                 width="16"
@@ -82,9 +83,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               alt=""
               width="32"
               height="32"
-              className="rounded-circle me-2"
+              className={`${styles['rounded-circle']}`}
             />
-            <strong>you</strong>
+            <strong className={`${styles.name}`}>you</strong>
           </a>
           <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
             <li><a className="dropdown-item" href="#">New project...</a></li>

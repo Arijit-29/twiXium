@@ -1,0 +1,79 @@
+.container{
+  padding: 0;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.header{
+    background-color: rgb(193, 237, 255)!important;
+   padding: 16px;
+ 
+}
+.nav-link{
+    color: blue !important;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  
+}
+.search{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+.login{
+    background-color: green !important ;
+}
+.toggle{
+   background-color: rgb(255, 0, 234) !important;
+   margin-left: 0px!important;
+   border: none;
+   border-radius: 4px;
+   color: white;
+   cursor: pointer;
+   
+  
+}
+@media screen and (max-width: 600px) {
+    .header {
+    height: 250px; 
+    padding: 8px 16px;
+}
+.bar{
+  display: flex;
+  justify-content: center;
+}
+.search{
+  width: 90% !important;
+}
+.welcome{
+  font-size: 25px;
+  font-weight: 900;
+ }
+}
+.welcome{
+    text-align: center;
+    color:blue;
+    overflow: hidden;
+    border-right: 2px solid blue;
+    white-space: nowrap;
+    width: 21ch;
+    margin: 0 auto;
+    animation: typing 2.5s steps(21, end), blink 0.75s step-end infinite;
+  
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 21ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
